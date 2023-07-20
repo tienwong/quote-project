@@ -1,0 +1,13 @@
+doctype html 
+html
+    head
+        title Quotes Directory
+    div
+        h1 Quotes Directory
+        br
+        p What would you like to do?
+        br
+        form(action='/quotes/addNewQuote', method='GET')
+            button(type='submit') Add New Quote
+        form(action='quotes/byAuthor', method='GET')
+            button(type='submit') View Quotes By Author
