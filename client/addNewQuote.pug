@@ -1,0 +1,18 @@
+doctype html
+html 
+    head 
+        title Add New Quote 
+    body
+        div
+            h3 Add New Quote
+            form(action='/quotes/addNewQuote', method='POST')
+                div
+                    label(for='text') Quote: 
+                    textarea(rows=5 cols=120 name='text')
+                br
+                div
+                    label(for='author') Author: 
+                    input(name='author')
+                br
+                div 
+                    button(type='submit') I consent to be sued for defamation instead of Tien if this is not true, and I agree that publishing this is legal under Wisconsin law. Submit my quote
