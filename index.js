@@ -7,6 +7,7 @@ require('dotenv').config()
 require('./config/database')
 
 const app = express()
+const PORT = process.env.PORT || 3000
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/quotes', quotes)
@@ -18,4 +19,4 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.listen(3000)
+app.listen(PORT)
