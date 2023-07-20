@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/addNewQuote', (req, res) => {
-    res.send('Add New Quote endpoint')
+    res.render('addNewQuote')
 })
 
 router.get('/byAuthor', (req, res) => {
@@ -15,11 +15,15 @@ router.get('/byAuthor', (req, res) => {
 })
 
 router.get('/byAuthor/:author', (req, res) => {
-    res.send('Quotes by the author ' + req.params.author)
+    res.send(req.params.author + ' said stuff at the GET by specific author endpoint')
 })
 
-router.post('/', (req, res) => {
-    res.send('POST route on /quotes')
+router.post('/byAuthor/', (req, res) => {
+    res.send('POST endpoint for /quotes/byAuthor')
+})
+
+router.post('/addNewQuote', (req, res) => {
+    res.send(req.body.author + ' said ' + req.body.text)
 })
 
 module.exports = router
