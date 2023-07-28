@@ -6,3 +6,10 @@ html
         div
             p "#{text}"
             p - #{author}
+        div
+            form(action='/quotes/addNewQuote', method='GET')
+                button(type='submit') Add Another Quote
+            br
+            form(action='/quotes/', method='GET')
+                button(type='submit') Main Menu
+            br
